@@ -1,12 +1,14 @@
 <h1>Battle View</h1>
-<h3>Add Unit</h3>
-<form ng-submit="vm.submitUnit(vm.newUnit)">
+<h3>Left Flank</h3>
+<!-- <form ng-submit="vm.submitUnit(vm.newUnit)">
     <input type="text" placeholder="type" ng-model="vm.newUnit.type">
     <input type="number" placeholder="soldiers" ng-model="vm.newUnit.soldiers">
     <input type="number" placeholder="power per unit" ng-model="vm.newUnit.powerPerSoldier">
     <input type="text" placeholder="commander" ng-model="vm.newUnit.commander">
     <input type="submit">
-</form>
-<p ng-repeat="unit in vm.units.data">
+</form> -->
+<!-- <p ng-repeat="unit in vm.units.data">
     {{unit.type}}: {{unit.soldiers}} soldiers
-</p>
+</p> -->
+{{vm.leftFlankSelf.data}}
+{{vm.regiment.data}}

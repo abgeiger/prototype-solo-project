@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var Unit = require('../models/unit.schema.js');
+var Regiment = require('../models/regiment.schema.js');
 
-// post new unit
+// post new regiment
 router.post('/', function(req, res){
-    var addUnit = new Unit(req.body);
-    addUnit.save(function(errorMakingDatabaseQuery, data){
+    var addRegiment = new Regiment(req.body);
+    addRegiment.save(function(errorMakingDatabaseQuery, data){
         if (errorMakingDatabaseQuery) {
             console.log('error with find', errorMakingDatabaseQuery);
             res.sendStatus(500);
@@ -16,11 +16,11 @@ router.post('/', function(req, res){
 });
 
 router.get('/', function(req, res){
-    Unit.find({}, function(err, units){
+    Regiment.find({}, function(err, regiments){
         if(err) {
             res.sendStatus(500);
         } else {
-            res.send(units);
+            res.send(regiments);
         }
     });
 });
